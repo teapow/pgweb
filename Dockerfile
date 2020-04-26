@@ -21,4 +21,4 @@ RUN \
   rm -f pgweb_linux_arm_v5.zip
 
 EXPOSE 8081
-CMD ["/usr/bin/pgweb", "--bind=0.0.0.0", "--listen=8081", "--host=${PGWEB_PGHOST}", "--port=${PGWEB_PGPORT}", "--db=${PGWEB_PGDB}", "--user=${PGWEB_PGUSER}", "--pass=${PGWEB_PGPASS}", "--ssl=${PGWEB_SSLMODE}"]
+CMD ["sh", "-c", "/usr/bin/pgweb --bind=0.0.0.0 --listen=8081 --host=${PGWEB_PGHOST} --port=${PGWEB_PGPORT} --db=${PGWEB_PGDB} --user=${PGWEB_PGUSER} --pass=${PGWEB_PGPASS} --ssl=${PGWEB_SSLMODE}"]
