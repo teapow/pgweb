@@ -9,3 +9,16 @@ A pre-built image for running pgweb on ARM platforms is available for use on [Do
 ```
 teapow/pgweb
 ```
+
+## Supported environment variables
+
+The pre-built image also supports pgweb configuration via the following environment variables:
+
+| Name            | Default value   | Description                                        |
+|-----------------|-----------------|----------------------------------------------------|
+| `PGWEB_PGHOST`  | `localhost`     | The hostname of the database server to connect to. |
+| `PGWEB_PGPORT`  | `5432`          | The port of the database server to connect to.     |
+| `PGWEB_PGDB`    | `postgres`      | The name of the database to connect to.            |
+| `PGWEB_PGUSER`  | `postgres`      | The username of the user to connect as.            |
+| `PGWEB_PGPASS`  | `postgres`      | The password for the PGWEB_PGUSER.                 |
+| `PGWEB_SSLMODE` | `disable`       | The SSL mode. See pgweb docs for more info.        |
